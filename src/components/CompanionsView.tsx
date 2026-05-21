@@ -7,19 +7,19 @@ export default function CompanionsView() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <div className="space-y-16 animate-in fade-in duration-1000">
-      <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="text-4xl md:text-5xl font-display text-white mb-6 tracking-widest drop-shadow-md font-bold">
+    <div className="space-y-12 sm:space-y-16 animate-in fade-in duration-1000">
+      <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 px-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-white mb-4 sm:mb-6 tracking-widest drop-shadow-md font-bold break-keep">
           용병과 동료 모집
         </h2>
-        <div className="w-24 h-px bg-[#d4af37]/30 mx-auto"></div>
+        <div className="w-16 sm:w-24 h-px bg-[#d4af37]/30 mx-auto"></div>
       </div>
 
       <section>
-        <div className="flex items-center gap-4 mb-10">
-          <h3 className="text-3xl font-display text-white tracking-widest pl-3 border-l-4 border-[#d4af37] font-bold">인물 명부</h3>
+        <div className="flex items-center gap-4 mb-8 sm:mb-10">
+          <h3 className="text-2xl sm:text-3xl font-display text-white tracking-widest pl-3 border-l-4 border-[#d4af37] font-bold">인물 명부</h3>
           <div className="flex-1 h-px bg-stone-800"></div>
-          <div className="text-stone-500 font-serif italic text-sm">{companions.length}명의 떠돌이들</div>
+          <div className="text-stone-500 font-serif italic text-xs sm:text-sm">{companions.length}명의 떠돌이들</div>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -89,13 +89,13 @@ export default function CompanionsView() {
         </div>
       </section>
 
-      <section className="bg-stone-900/60 p-8 md:p-12 border border-[#d4af37]/20 shadow-2xl relative overflow-hidden mt-16">
+      <section className="bg-stone-900/60 p-6 sm:p-8 md:p-12 border border-[#d4af37]/20 shadow-2xl relative overflow-hidden mt-12 sm:mt-16">
         <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-[#d4af37] to-[#855e0c]"></div>
-        <h3 className="text-2xl font-serif text-[#d4af37] flex items-center gap-3 mb-8 font-bold">
-          <HeartHandshake className="w-6 h-6" />
+        <h3 className="text-xl sm:text-2xl font-serif text-[#d4af37] flex items-center gap-3 mb-6 sm:mb-8 font-bold">
+          <HeartHandshake className="w-5 h-5 sm:w-6 sm:h-6" />
           결속과 배신의 규율
         </h3>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
           <div className="space-y-4">
             <h4 className="flex items-center gap-2 text-stone-100 font-serif text-xl border-b border-stone-700 pb-2 font-bold"><Users className="w-5 h-5 text-emerald-500"/> 부대원 모집</h4>
             <ul className="text-sm text-stone-300 space-y-3 font-serif leading-relaxed">

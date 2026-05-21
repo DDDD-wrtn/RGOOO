@@ -28,12 +28,12 @@ export default function FactionsView() {
       
       {/* 5대 세력 섹션 */}
       <section>
-        <div className="flex items-center gap-4 mb-12">
-          <h2 className="text-3xl sm:text-4xl font-display text-white tracking-widest pl-3 border-l-4 border-[#d4af37] font-bold">5대 지배 세력</h2>
+        <div className="flex items-center gap-4 mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display text-white tracking-widest pl-3 border-l-4 border-[#d4af37] font-bold">5대 지배 세력</h2>
           <div className="flex-1 h-px bg-stone-800"></div>
         </div>
 
-        <div className="space-y-20">
+        <div className="space-y-12 sm:space-y-20">
           {factions.map((faction, idx) => {
             const region = regions.find(r => r.faction === faction.name);
             const isEven = idx % 2 === 0;
@@ -54,20 +54,20 @@ export default function FactionsView() {
                     </>
                   )}
                   
-                  <div className="relative z-10 p-8 lg:p-12 h-full flex flex-col justify-center">
-                    <div className="mb-8">
-                      <span className="inline-block px-3 py-1 border border-[#d4af37]/40 bg-[#d4af37]/10 text-[#d4af37] font-serif text-xs font-bold tracking-widest mb-4 backdrop-blur-md">
+                  <div className="relative z-10 p-6 sm:p-8 lg:p-12 h-full flex flex-col justify-center">
+                    <div className="mb-6 sm:mb-8">
+                      <span className="inline-block px-3 py-1 border border-[#d4af37]/40 bg-[#d4af37]/10 text-[#d4af37] font-serif text-[10px] sm:text-xs font-bold tracking-widest mb-3 sm:mb-4 backdrop-blur-md">
                         {faction.leaderType}
                       </span>
-                      <h3 className="text-3xl sm:text-4xl md:text-5xl font-display text-white tracking-widest flex items-center gap-4 mb-4 font-bold drop-shadow-md">
+                      <h3 className="text-2xl sm:text-3xl md:text-5xl font-display text-white tracking-widest flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4 font-bold drop-shadow-md whitespace-nowrap sm:whitespace-normal break-keep">
                         <span>{faction.name}</span>
-                        <span className="text-2xl text-[#d4af37] opacity-80">{faction.emoji}</span>
+                        <span className="text-xl sm:text-2xl text-[#d4af37] opacity-80">{faction.emoji}</span>
                       </h3>
-                      <p className="text-xl text-[#bf953f] font-serif font-bold italic drop-shadow-sm border-l-2 border-[#bf953f] pl-4">"{faction.description}"</p>
+                      <p className="text-base sm:text-xl text-[#bf953f] font-serif font-bold italic drop-shadow-sm border-l-2 border-[#bf953f] pl-3 sm:pl-4 break-keep">"{faction.description}"</p>
                     </div>
 
                     {region && (
-                      <div className="space-y-6 bg-black/60 backdrop-blur-sm p-6 lg:p-8 border border-stone-700/50 shadow-2xl">
+                      <div className="space-y-4 sm:space-y-6 bg-black/60 backdrop-blur-sm p-5 sm:p-6 lg:p-8 border border-stone-700/50 shadow-2xl">
                         <div>
                           <h4 className="flex items-center gap-2 text-sm font-serif text-stone-300 font-bold tracking-widest mb-3 border-b border-stone-700 pb-2">
                              <Compass className="w-4 h-4 text-[#d4af37]" /> 영지의 심장, 수도
@@ -143,15 +143,15 @@ export default function FactionsView() {
         </div>
 
         <div className="relative z-10">
-          <div className="text-center mb-12">
-            <ShieldAlert className="w-12 h-12 text-rose-800 mx-auto mb-4" />
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-rose-700 tracking-widest mb-4 drop-shadow-md">도적단 출몰지</h2>
-            <p className="text-stone-400 font-serif text-lg">기근과 전란이 낳은 대륙의 골칫거리들. 소규모 교전을 통한 명성 파밍의 주 대상입니다.</p>
+          <div className="text-center mb-8 sm:mb-12">
+            <ShieldAlert className="w-10 h-10 sm:w-12 sm:h-12 text-rose-800 mx-auto mb-3 sm:mb-4" />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-rose-700 tracking-widest mb-3 sm:mb-4 drop-shadow-md">도적단 출몰지</h2>
+            <p className="text-stone-400 font-serif text-sm sm:text-lg break-keep px-4">기근과 전란이 낳은 대륙의 골칫거리들. 소규모 교전을 통한 명성 파밍의 주 대상입니다.</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {bandits.map((bandit, idx) => (
-              <div key={idx} className="bg-black/80 backdrop-blur-md p-6 border border-rose-900/50 hover:border-rose-700/80 transition-colors shadow-lg group/bandit relative overflow-hidden">
+              <div key={idx} className="bg-black/80 backdrop-blur-md p-5 sm:p-6 border border-rose-900/50 hover:border-rose-700/80 transition-colors shadow-lg group/bandit relative overflow-hidden">
                 {BANDIT_IMAGES[bandit.name] && (
                   <>
                     <img 
@@ -163,9 +163,9 @@ export default function FactionsView() {
                   </>
                 )}
                 <div className="relative z-10 flex flex-col h-full">
-                  <div className="text-xs font-serif font-bold tracking-widest text-[#d4af37] mb-2">{bandit.region}</div>
-                  <h3 className="text-2xl font-display font-bold text-rose-500 mb-4 tracking-widest group-hover/bandit:text-rose-400 transition-colors drop-shadow-md">{bandit.name}</h3>
-                  <p className="text-sm text-stone-300 font-serif leading-relaxed mt-auto line-clamp-3">{bandit.description}</p>
+                  <div className="text-[10px] sm:text-xs font-serif font-bold tracking-widest text-[#d4af37] mb-1 sm:mb-2">{bandit.region}</div>
+                  <h3 className="text-xl sm:text-2xl font-display font-bold text-rose-500 mb-3 sm:mb-4 tracking-widest group-hover/bandit:text-rose-400 transition-colors drop-shadow-md break-keep whitespace-nowrap sm:whitespace-normal">{bandit.name}</h3>
+                  <p className="text-xs sm:text-sm text-stone-300 font-serif leading-relaxed mt-auto break-keep">{bandit.description}</p>
                 </div>
               </div>
             ))}
@@ -174,9 +174,9 @@ export default function FactionsView() {
       </section>
 
       {/* 세계 지도 섹션 */}
-      <section className="relative mt-20 pt-16 border-t border-stone-800">
-        <div className="text-center mb-12">
-           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-white tracking-widest mb-4 font-bold">전란의 대륙도</h2>
+      <section className="relative mt-16 sm:mt-20 pt-12 sm:pt-16 border-t border-stone-800">
+        <div className="text-center mb-8 sm:mb-12">
+           <h2 className="text-2xl sm:text-3xl md:text-5xl font-display text-white tracking-widest mb-3 sm:mb-4 font-bold">전란의 대륙도</h2>
            <div className="w-16 h-px bg-[#d4af37] mx-auto"></div>
         </div>
         <div 
