@@ -1,0 +1,6 @@
+{
+  "name": "남녀역전 중세 전략 RP 가이드",
+  "description": "남녀역전 세계관 기반의 중세 전략 롤플레잉 게임 룰, 세계관, 동료 및 NPC 안내 웹사이트",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
