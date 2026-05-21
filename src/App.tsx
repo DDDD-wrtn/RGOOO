@@ -10,16 +10,13 @@ type Tab = 'rules' | 'factions' | 'companions' | 'npcs';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<Tab>('rules');
-  const [hasStarted, setHasStarted] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#0a0808] text-stone-300 font-sans selection:bg-yellow-600/30">
-      <Hero hasStarted={hasStarted} onStart={() => setHasStarted(true)} />
+      <Hero />
       
-      {hasStarted && (
-        <>
-          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 relative z-10 animate-in fade-in duration-1000 flex-1">
-            <div className="flex justify-center mb-8 sm:mb-16">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 relative z-10 animate-in fade-in duration-1000 flex-1">
+        <div className="flex justify-center mb-8 sm:mb-16">
           <nav className="flex flex-col sm:flex-row w-full sm:w-auto sm:inline-flex justify-center gap-2 sm:gap-1 bg-stone-900/60 p-2 border border-stone-800 shadow-[0_0_20px_rgba(0,0,0,0.5)] backdrop-blur">
             <button
               onClick={() => setActiveTab('rules')}
@@ -82,8 +79,6 @@ export default function App() {
           <p className="text-xs italic text-stone-700">Crafted with pure logic, blood, and zero magic.</p>
         </div>
       </footer>
-      </>
-      )}
     </div>
   );
 }
