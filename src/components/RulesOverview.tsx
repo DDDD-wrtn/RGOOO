@@ -51,18 +51,19 @@ export default function RulesOverview() {
       </section>
 
       {/* 중간 배너 이미지로 시각적 환기 (프레야 전투 장면) */}
-      <section className="relative w-full h-[400px] border border-stone-800 overflow-hidden group">
+      <section className="relative w-full h-[500px] border border-stone-800 overflow-hidden group">
          <img 
            src="https://i.postimg.cc/C5SCFLrL/geulim-ulpeu-3-jeontudol-ib.png" 
            alt="전투 장면"
-           className="absolute inset-0 w-full h-full object-cover object-top opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-1000 grayscale-[0.2]"
+           className="absolute inset-0 w-full h-full object-cover object-[center_35%] opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-1000 grayscale-[0.2]"
          />
+         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0808]/80 via-transparent to-transparent"></div>
          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0808] via-transparent to-transparent"></div>
          <div className="absolute inset-0 bg-black/40"></div>
          <div className="absolute bottom-10 left-10 md:left-16 z-10 max-w-xl">
-             <h3 className="text-2xl font-serif text-[#d4af37] tracking-widest mb-2 font-bold drop-shadow-lg">강철의 서사시</h3>
-             <p className="text-stone-300 font-serif leading-relaxed text-sm drop-shadow-md">
-                치열한 전장 속에서 당신의 능력이 판도를 뒤엎고 대륙의 전설이 됩니다. 대륙의 패권, 그것은 피로 쓰여진 역사입니다.
+             <h3 className="text-3xl md:text-4xl font-display text-[#d4af37] tracking-widest mb-4 font-bold drop-shadow-lg">강철의 서사시</h3>
+             <p className="text-stone-300 font-serif leading-relaxed text-sm drop-shadow-md pb-2">
+                치열한 전장 속에서 당신의 능력이 판도를 뒤엎고 대륙의 전설이 됩니다.<br className="hidden sm:block"/> 대륙의 패권, 그것은 피로 쓰여진 역사입니다.
              </p>
          </div>
       </section>

@@ -6,9 +6,18 @@ import ImageModal from './ImageModal';
 const FACTION_IMAGES: Record<string, string> = {
   '셉텐트리아': 'https://i.postimg.cc/90bdz5sp/aulelliuseu-1-jeontudol-ib.png',
   '발로리아': 'https://i.postimg.cc/Zn4PTKsR/mongpoleu-1-jeontudol-ib.png',
-  '아르데니아': 'https://i.postimg.cc/sXp9dZcB/al-dina-1-jeontudol-ib.png',
+  '아르데니아': 'https://i.postimg.cc/ydFX4SPg/al-jaheuleu-3-jeontudol-ib.png',
   '칸-테라': 'https://i.postimg.cc/sxsPVDH2/boleujigin-1-jeontudol-ib.png',
   '노르드가드': 'https://i.postimg.cc/gcHqg8j7/aieonsaideu-1-jeontudol-ib.png',
+};
+
+const BANDIT_IMAGES: Record<string, string> = {
+  '녹슨 철기대': 'https://i.postimg.cc/PJSS9wfs/dojeogdan-sebtenteulia-selyeog.webp',
+  '검은 파도 해적': 'https://i.postimg.cc/C5ccXqht/dojeogdan-noleudeugadeu-selyeog.webp',
+  '모래바람 노상강도': 'https://i.postimg.cc/NFddSHs3/dojeogdan-aleudenia-selyeog.webp',
+  '검은 숲 밀렵꾼': 'https://i.postimg.cc/Znww2dYk/dojeogdan-ballolia-selyeog.webp',
+  '버려진 발굽 약탈자': 'https://i.postimg.cc/hv226dDN/dojeogdan-kan-tela-selyeog.webp',
+  '잿빛 넝마주이': 'https://i.postimg.cc/8cZZ96pq/dojeogdan-jeon-beom-wi.webp',
 };
 
 export default function FactionsView() {
@@ -166,10 +175,22 @@ export default function FactionsView() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {bandits.map((bandit, idx) => (
-              <div key={idx} className="bg-black/60 backdrop-blur-md p-6 border border-rose-900/50 hover:border-rose-700/80 transition-colors shadow-lg group/bandit">
-                <div className="text-xs font-serif font-bold tracking-widest text-[#d4af37] mb-2">{bandit.region}</div>
-                <h3 className="text-2xl font-display font-bold text-rose-500 mb-4 tracking-widest group-hover/bandit:text-rose-400 transition-colors">{bandit.name}</h3>
-                <p className="text-sm text-stone-300 font-serif leading-relaxed">{bandit.description}</p>
+              <div key={idx} className="bg-black/80 backdrop-blur-md p-6 border border-rose-900/50 hover:border-rose-700/80 transition-colors shadow-lg group/bandit relative overflow-hidden">
+                {BANDIT_IMAGES[bandit.name] && (
+                  <>
+                    <img 
+                      src={BANDIT_IMAGES[bandit.name]}
+                      alt={bandit.name}
+                      className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover/bandit:opacity-40 group-hover/bandit:scale-110 transition-all duration-700 grayscale-[0.4]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+                  </>
+                )}
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="text-xs font-serif font-bold tracking-widest text-[#d4af37] mb-2">{bandit.region}</div>
+                  <h3 className="text-2xl font-display font-bold text-rose-500 mb-4 tracking-widest group-hover/bandit:text-rose-400 transition-colors drop-shadow-md">{bandit.name}</h3>
+                  <p className="text-sm text-stone-300 font-serif leading-relaxed mt-auto line-clamp-3">{bandit.description}</p>
+                </div>
               </div>
             ))}
           </div>
