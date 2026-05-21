@@ -12,47 +12,8 @@ export default function CompanionsView() {
         <h2 className="text-4xl md:text-5xl font-display text-white mb-6 tracking-widest drop-shadow-md font-bold">
           용병과 동료 모집
         </h2>
-        <div className="w-24 h-px bg-[#d4af37]/30 mx-auto mb-8"></div>
-        <p className="text-stone-300 font-serif text-lg leading-relaxed">
-          대막을 떠도는 무뢰배부터 가문을 등진 소드마스터까지.<br/>
-          돈과 신뢰로 그들을 부리십시오. 호의를 베풀면 목숨을 바치지만, 금화가 마르면 당신의 등을 찌를 것입니다.
-        </p>
+        <div className="w-24 h-px bg-[#d4af37]/30 mx-auto"></div>
       </div>
-
-      <section className="bg-stone-900/60 p-8 md:p-12 border border-[#d4af37]/20 shadow-2xl relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-[#d4af37] to-[#855e0c]"></div>
-        <h3 className="text-2xl font-serif text-[#d4af37] flex items-center gap-3 mb-8 font-bold">
-          <HeartHandshake className="w-6 h-6" />
-          결속과 배신의 규율
-        </h3>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="space-y-4">
-            <h4 className="flex items-center gap-2 text-stone-100 font-serif text-xl border-b border-stone-700 pb-2 font-bold"><Users className="w-5 h-5 text-emerald-500"/> 부대원 모집</h4>
-            <ul className="text-sm text-stone-300 space-y-3 font-serif leading-relaxed">
-              <li className="flex items-start gap-2"><ChevronRight className="w-4 h-4 shrink-0 text-[#d4af37] mt-0.5"/> <strong>선술집 조우:</strong> 각 세력 대도시 타번(선술집) 방문 시 해당 세력 출신 동료 2인 무작위 조우</li>
-              <li className="flex items-start gap-2"><ChevronRight className="w-4 h-4 shrink-0 text-[#d4af37] mt-0.5"/> <strong>고용 협상:</strong> 대화를 통한 사연 파악 후 부대 합류 제안 및 금화 흥정</li>
-              <li className="flex items-start gap-2"><ChevronRight className="w-4 h-4 shrink-0 text-[#d4af37] mt-0.5"/> <strong>재야 인물:</strong> 영입을 거절하더라도 훗날 다른 선술집에서 재회하여 재협상 가능</li>
-            </ul>
-          </div>
-          <div className="space-y-4">
-            <h4 className="flex items-center gap-2 text-stone-100 font-serif text-xl border-b border-stone-700 pb-2 font-bold"><Coins className="w-5 h-5 text-[#d4af37]"/> 주급 (시즌 단위 단위 유지비)</h4>
-            <ul className="text-sm text-stone-300 space-y-3 font-serif leading-relaxed">
-              <li className="flex items-center justify-between bg-black/40 px-3 py-2 border border-stone-800"><span className="text-stone-400 font-bold">Tier 1 보병/궁수</span> <strong className="text-[#bf953f] font-mono text-base">3 Gold</strong></li>
-              <li className="flex items-center justify-between bg-black/40 px-3 py-2 border border-stone-800"><span className="text-stone-400 font-bold">Tier 2 정예/전문가</span> <strong className="text-[#bf953f] font-mono text-base">8 Gold</strong></li>
-              <li className="flex items-center justify-between bg-black/40 px-3 py-2 border border-stone-800"><span className="text-stone-400 font-bold">Tier 3 기병/지휘관</span> <strong className="text-[#bf953f] font-mono text-base">15 Gold</strong></li>
-            </ul>
-          </div>
-          <div className="space-y-4">
-            <h4 className="flex items-center gap-2 text-stone-100 font-serif text-xl border-b border-stone-700 pb-2 font-bold"><AlertTriangle className="w-5 h-5 text-rose-600"/> 사기 및 충성도</h4>
-            <ul className="text-sm text-stone-300 space-y-3 font-serif leading-relaxed">
-              <li className="flex items-start gap-2"><span className="text-rose-400 font-bold tracking-widest min-w-[70px]">불만 폭증 </span> 급여 미지급(+20), 잦은 패전(+10), 전투 배제(+5)</li>
-              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold tracking-widest min-w-[70px]">부대 이탈 </span> 불만도 80 도달 시 병영 내 갈등 및 탈주 경고 발생</li>
-              <li className="flex items-start gap-2"><span className="text-rose-600 font-bold tracking-widest min-w-[70px]">반발 적대 </span> 불만도 100 달성 시 장비 탈취 후 도주 및 적대 팩션 합류</li>
-              <li className="flex items-start gap-2 mt-2 pt-2 border-t border-stone-800"><span className="text-emerald-400 font-bold tracking-widest min-w-[70px]">충성 맹세 </span> 동료 개인의 복수나 미션 해결 시 불만도 영구 초기화</li>
-            </ul>
-          </div>
-        </div>
-      </section>
 
       <section>
         <div className="flex items-center gap-4 mb-10">
@@ -125,6 +86,41 @@ export default function CompanionsView() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-stone-900/60 p-8 md:p-12 border border-[#d4af37]/20 shadow-2xl relative overflow-hidden mt-16">
+        <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-[#d4af37] to-[#855e0c]"></div>
+        <h3 className="text-2xl font-serif text-[#d4af37] flex items-center gap-3 mb-8 font-bold">
+          <HeartHandshake className="w-6 h-6" />
+          결속과 배신의 규율
+        </h3>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="space-y-4">
+            <h4 className="flex items-center gap-2 text-stone-100 font-serif text-xl border-b border-stone-700 pb-2 font-bold"><Users className="w-5 h-5 text-emerald-500"/> 부대원 모집</h4>
+            <ul className="text-sm text-stone-300 space-y-3 font-serif leading-relaxed">
+              <li className="flex items-start gap-2"><ChevronRight className="w-4 h-4 shrink-0 text-[#d4af37] mt-0.5"/> <strong>선술집 조우:</strong> 각 세력 대도시 타번(선술집) 방문 시 해당 세력 출신 동료 2인 무작위 조우</li>
+              <li className="flex items-start gap-2"><ChevronRight className="w-4 h-4 shrink-0 text-[#d4af37] mt-0.5"/> <strong>고용 협상:</strong> 대화를 통한 사연 파악 후 부대 합류 제안 및 금화 흥정</li>
+              <li className="flex items-start gap-2"><ChevronRight className="w-4 h-4 shrink-0 text-[#d4af37] mt-0.5"/> <strong>재야 인물:</strong> 영입을 거절하더라도 훗날 다른 선술집에서 재회하여 재협상 가능</li>
+            </ul>
+          </div>
+          <div className="space-y-4">
+            <h4 className="flex items-center gap-2 text-stone-100 font-serif text-xl border-b border-stone-700 pb-2 font-bold"><Coins className="w-5 h-5 text-[#d4af37]"/> 주급 (시즌 단위 단위 유지비)</h4>
+            <ul className="text-sm text-stone-300 space-y-3 font-serif leading-relaxed">
+              <li className="flex items-center justify-between bg-black/40 px-3 py-2 border border-stone-800"><span className="text-stone-400 font-bold">Tier 1 보병/궁수</span> <strong className="text-[#bf953f] font-mono text-base">3 Gold</strong></li>
+              <li className="flex items-center justify-between bg-black/40 px-3 py-2 border border-stone-800"><span className="text-stone-400 font-bold">Tier 2 정예/전문가</span> <strong className="text-[#bf953f] font-mono text-base">8 Gold</strong></li>
+              <li className="flex items-center justify-between bg-black/40 px-3 py-2 border border-stone-800"><span className="text-stone-400 font-bold">Tier 3 기병/지휘관</span> <strong className="text-[#bf953f] font-mono text-base">15 Gold</strong></li>
+            </ul>
+          </div>
+          <div className="space-y-4">
+            <h4 className="flex items-center gap-2 text-stone-100 font-serif text-xl border-b border-stone-700 pb-2 font-bold"><AlertTriangle className="w-5 h-5 text-rose-600"/> 사기 및 충성도</h4>
+            <ul className="text-sm text-stone-300 space-y-3 font-serif leading-relaxed">
+              <li className="flex items-start gap-2"><span className="text-rose-400 font-bold tracking-widest min-w-[70px]">불만 폭증 </span> 급여 미지급(+20), 잦은 패전(+10), 전투 배제(+5)</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold tracking-widest min-w-[70px]">부대 이탈 </span> 불만도 80 도달 시 병영 내 갈등 및 탈주 경고 발생</li>
+              <li className="flex items-start gap-2"><span className="text-rose-600 font-bold tracking-widest min-w-[70px]">반발 적대 </span> 불만도 100 달성 시 장비 탈취 후 도주 및 적대 팩션 합류</li>
+              <li className="flex items-start gap-2 mt-2 pt-2 border-t border-stone-800"><span className="text-emerald-400 font-bold tracking-widest min-w-[70px]">충성 맹세 </span> 동료 개인의 복수나 미션 해결 시 불만도 영구 초기화</li>
+            </ul>
+          </div>
         </div>
       </section>
 

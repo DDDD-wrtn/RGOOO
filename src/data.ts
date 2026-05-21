@@ -10,19 +10,19 @@ export const stats: Stat[] = [
 ];
 
 export const factions: Faction[] = [
-  { id: 'septentria', name: '셉텐트리아', emoji: '🦅', leaderType: '여황제 전제', description: '최대영토·관료·정예군단' },
-  { id: 'valoria', name: '발로리아', emoji: '🦁', leaderType: '여왕 봉건', description: '기사단·명예·분권' },
-  { id: 'ardenia', name: '아르데니아', emoji: '🌙', leaderType: '여술탄', description: '교역·암투·맘루크' },
-  { id: 'khan-terra', name: '칸-테라', emoji: '🐎', leaderType: '여대칸', description: '기마궁병·이동·속도' },
-  { id: 'nordgard', name: '노르드가드', emoji: '🐺', leaderType: '여왕 무력통치', description: '해상·약탈·버서커' },
+  { id: 'septentria', name: '셉텐트리아 제국', emoji: '🦅', leaderType: '여황제 전제', description: '최대영토·관료·정예군단' },
+  { id: 'valoria', name: '발로리아 왕국', emoji: '🦁', leaderType: '여왕 봉건', description: '기사단·명예·분권' },
+  { id: 'ardenia', name: '아르데니아 술탄국', emoji: '🌙', leaderType: '여술탄', description: '교역·암투·맘루크' },
+  { id: 'khan-terra', name: '칸-테라 대칸국', emoji: '🐎', leaderType: '여대칸', description: '기마궁병·이동·속도' },
+  { id: 'nordgard', name: '노르드가드 왕국', emoji: '🐺', leaderType: '여왕 무력통치', description: '해상·약탈·버서커' },
 ];
 
 export const bandits: Bandit[] = [
-  { region: '셉텐트리아', name: '녹슨 철기대', description: '가혹한 규율 피해 도망친 탈영병. 녹슨 중무장, 낮은 사기. 방패/투창 방진 구사' },
-  { region: '노르드가드', name: '검은 파도 해적', description: '가족 먹이려 남하한 극빈층. 둥근방패/도끼 무장. 항복 없는 결사적 호전성' },
-  { region: '아르데니아', name: '모래바람 노상강도', description: '상권서 밀려난 변방 부족. 앙상한 말/낙타 탑승. 투창 게릴라/사막 유인 전술' },
-  { region: '발로리아', name: '검은 숲 밀렵꾼', description: '가혹한 세금 피해 이탈한 농노. 숲 매복, 장궁/쇠스랑 일제 사격' },
-  { region: '칸-테라', name: '버려진 발굽 약탈자', description: '전쟁 패배 유목민. 조잡한 단궁 기마 궁술 구사. 기동력 우수/방어 전무' },
+  { region: '셉텐트리아 제국', name: '녹슨 철기대', description: '가혹한 규율 피해 도망친 탈영병. 녹슨 중무장, 낮은 사기. 방패/투창 방진 구사' },
+  { region: '노르드가드 왕국', name: '검은 파도 해적', description: '가족 먹이려 남하한 극빈층. 둥근방패/도끼 무장. 항복 없는 결사적 호전성' },
+  { region: '아르데니아 술탄국', name: '모래바람 노상강도', description: '상권서 밀려난 변방 부족. 앙상한 말/낙타 탑승. 투창 게릴라/사막 유인 전술' },
+  { region: '발로리아 왕국', name: '검은 숲 밀렵꾼', description: '가혹한 세금 피해 이탈한 농노. 숲 매복, 장궁/쇠스랑 일제 사격' },
+  { region: '칸-테라 대칸국', name: '버려진 발굽 약탈자', description: '전쟁 패배 유목민. 조잡한 단궁 기마 궁술 구사. 기동력 우수/방어 전무' },
   { region: '공통 (전역)', name: '잿빛 넝마주이', description: '모든 걸 잃은 오합지졸 부랑자. 누더기/몽둥이 무장. 처절한 생존 투쟁' },
 ];
 
@@ -41,7 +41,7 @@ export const companions: Companion[] = [
 ];
 
 export const npcs: Record<string, NPC[]> = {
-  '셉텐트리아': [
+  '셉텐트리아 제국': [
     { name: '카르멘', title: '여황제', gender: '女', traits: '카리스마·전사·지배자', description: '황금투구, 친위대직접지휘', stats: '💪8 👁9 🌹8', imageUrl: 'https://i.postimg.cc/vZC40VXz/aulelliuseu-1-cheosjou.png' },
     { name: '줄리우스', title: '황자(국서)', gender: '男', traits: '온화·기품·외조', description: '내정', stats: '🧠7 🌹6', imageUrl: 'https://i.postimg.cc/13b8vqMK/aulelliuseu-2-cheosjou.png' },
     { name: '발레리아', title: '제1황녀', gender: '女', traits: '용맹·책임감·강직', description: '관문성방어사령관', stats: '💪7 👁7 🪽6', imageUrl: 'https://i.postimg.cc/W1xd5kSS/aulelliuseu-3-cheosjou.png' },
@@ -52,7 +52,7 @@ export const npcs: Record<string, NPC[]> = {
     { name: '셉티무스', title: '병참관', gender: '男', traits: '헌신·성실·자애', description: '무기생산·상이군인돌봄. \'군단의 아버지\'', stats: '🧠6', imageUrl: 'https://i.postimg.cc/B6BtZw3d/peullabiuseu-2-cheosjou.png' },
     { name: '타티아나', title: '돌격대장', gender: '女', traits: '고아출신·증명욕·맹렬', description: '수양딸. 비질성담당', stats: '💪8 🪽7', imageUrl: 'https://i.postimg.cc/2673jXmN/peullabiuseu-3-cheosjou.png' },
   ],
-  '발로리아': [
+  '발로리아 왕국': [
     { name: '이사벨라', title: '여왕', gender: '女', traits: '맹렬·기사도·낭만', description: '사자왕혈통. 전장=맹렬, 평시=기사도수호', stats: '💪8 👁7 🌹8', imageUrl: 'https://i.postimg.cc/yYY3xBkL/mongpoleu-1-cheosjou.png' },
     { name: '필립', title: '국서', gender: '男', traits: '우아·예술·온순', description: '음유시인. 내정', stats: '🌹7 🧠6', imageUrl: 'https://i.postimg.cc/qMbhCY3L/mongpoleu-2-cheosjou.png' },
     { name: '잔', title: '제1왕녀', gender: '女', traits: '마상창챔피언·열정·자부심', description: '그리핀보루성담당', stats: '💪8 🪽7', imageUrl: 'https://i.postimg.cc/c49g8jnV/mongpoleu-3-cheosjou.png' },
@@ -63,7 +63,7 @@ export const npcs: Record<string, NPC[]> = {
     { name: '클로드', title: '농무관', gender: '男', traits: '학자풍·식물학·온건', description: '생산량극대화천재', stats: '🧠8', imageUrl: 'https://i.postimg.cc/9F8RqS9F/bobe-2-cheosjou.png' },
     { name: '샬롯', title: '상단장', gender: '女', traits: '거침없음·대륙횡단·거상', description: '용병+대륙횡단유통', stats: '👁6 🌹6 🪽5', imageUrl: 'https://i.postimg.cc/DyjJbDGZ/bobe-3-cheosjou.png' },
   ],
-  '아르데니아': [
+  '아르데니아 술탄국': [
     { name: '파티마', title: '여술탄', gender: '女', traits: '냉혹·비밀주의·정치가', description: '암살자·정보원직접통제', stats: '🧠9 🌹7 👁7', imageUrl: 'https://i.postimg.cc/YSghZCyZ/al-dina-1-cheosjou.png' },
     { name: '아미르', title: '국서', gender: '男', traits: '매혹적·예술·시인', description: '하렘의주인. 궁전내실·연회', stats: '🌹9', imageUrl: 'https://i.postimg.cc/BvDXknVW/al-dina-2-cheosjou.png' },
     { name: '아이샤', title: '제1공주', gender: '女', traits: '치밀·냉혈·숙청자', description: '척살대대장', stats: '💪7 🪽8 🧠7', imageUrl: 'https://i.postimg.cc/KYLRw8HS/al-dina-3-cheosjou.png' },
@@ -74,7 +74,7 @@ export const npcs: Record<string, NPC[]> = {
     { name: '하산', title: '병참관', gender: '男', traits: '묵묵·듬직·헌신', description: '자라남편. 낙타사육·군수물자', stats: '🧠6', imageUrl: 'https://i.postimg.cc/YSghZCsq/al-jaheuleu-2-cheosjou.png' },
     { name: '나디아', title: '돌격대장', gender: '女', traits: '창술·게릴라·기동', description: '가주여동생. 경장갑기병게릴라전', stats: '💪8 🪽8', imageUrl: 'https://i.postimg.cc/HxgVg1qp/al-jaheuleu-3-cheosjou.png' },
   ],
-  '칸-테라': [
+  '칸-테라 대칸국': [
     { name: '알탄', title: '대칸', gender: '女', traits: '호방·무패·카리스마', description: '전원기병. 직접돌격지휘', stats: '💪9 👁8 🪽8', imageUrl: 'https://i.postimg.cc/c49g8j3y/boleujigin-1-cheosjou.png' },
     { name: '티무르', title: '국서', gender: '男', traits: '학식·초원의지혜·온화', description: '유목민전통수호. 지혜', stats: '🧠7 🌹6', imageUrl: 'https://i.postimg.cc/02WMJ3S1/boleujigin-2-cheosjou.png' },
     { name: '쿠툴룬', title: '제1공주', gender: '女', traits: '대담·전술천재·야심', description: '차기대칸후보. 독립기병대', stats: '💪7 👁8 🪽7', imageUrl: 'https://i.postimg.cc/7YsGTczy/boleujigin-3-cheosjou.png' },
@@ -85,7 +85,7 @@ export const npcs: Record<string, NPC[]> = {
     { name: '바르스', title: '천막지기', gender: '男', traits: '말솜씨·사교·수완', description: '툴루이남편. 말교역외교', stats: '🌹7 🧠6', imageUrl: 'https://i.postimg.cc/zBF3DPNw/koleugun-2-cheosjou.png' },
     { name: '만두카이', title: '보급대장', gender: '女', traits: '무모·호쾌·돌파력', description: '대칸직속. 강행군보급. 약탈보급전문', stats: '💪9 🪽7', imageUrl: 'https://i.postimg.cc/pTJyV1vw/koleugun-3-cheosjou.png' },
   ],
-  '노르드가드': [
+  '노르드가드 왕국': [
     { name: '시그리드', title: '여왕', gender: '女', traits: '폭군·무력·공포', description: '반발세력무력진압. 두려움으로통치', stats: '💪9 👁7', imageUrl: 'https://i.postimg.cc/FHwYTLGn/aieonsaideu-1-cheosjou.png' },
     { name: '발더', title: '국서', gender: '男', traits: '인내·조용·비밀', description: '왕의그늘. 실질내정. 비밀정보망', stats: '🧠7', imageUrl: 'https://i.postimg.cc/HkFr6y3F/aieonsaideu-2-cheosjou.png' },
     { name: '아스트리드', title: '제1왕녀', gender: '女', traits: '잔혹·지배욕·모후닮', description: '어머니보다잔혹. 무력세습', stats: '💪8 🌹5', imageUrl: 'https://i.postimg.cc/Dzs8HwYY/aieonsaideu-3-cheosjou.png' },
@@ -99,27 +99,27 @@ export const npcs: Record<string, NPC[]> = {
 };
 
 export const families: Record<string, Family[]> = {
-  '셉텐트리아': [
+  '셉텐트리아 제국': [
     { name: '아우렐리우스', role: '황가', members: ['카르멘(당주)', '줄리우스(참모)', '발레리아(장수)'] },
     { name: '실비우스', role: '재무', members: ['마르티나(당주)', '루키우스(참모)', '옥타비아(장수)'] },
     { name: '플라비우스', role: '군부', members: ['클라우디아(당주)', '셉티무스(참모)', '타티아나(장수)'] }
   ],
-  '발로리아': [
+  '발로리아 왕국': [
     { name: '몽포르', role: '왕가', members: ['이사벨라(당주)', '필립(참모)', '잔(장수)'] },
     { name: '블랙우드', role: '군사', members: ['엘레노어(당주)', '헨리(참모)', '아델라인(장수)'] },
     { name: '보베', role: '경제', members: ['마거리트(당주)', '클로드(참모)', '샬롯(장수)'] }
   ],
-  '아르데니아': [
+  '아르데니아 술탄국': [
     { name: '알 디나', role: '술탄가', members: ['파티마(당주)', '아미르(참모)', '아이샤(장수)'] },
     { name: '카심', role: '상업', members: ['살마(당주)', '타리크(참모)', '라일라(장수)'] },
     { name: '알 자흐르', role: '군사', members: ['자라(당주)', '하산(참모)', '나디아(장수)'] }
   ],
-  '칸-테라': [
+  '칸-테라 대칸국': [
     { name: '보르지긴', role: '대칸가', members: ['알탄(당주)', '티무르(참모)', '쿠툴룬(장수)'] },
     { name: '잘라이르', role: '선봉', members: ['제베(당주)', '카사르(참모)', '수베데이(장수)'] },
     { name: '코르군', role: '후방', members: ['툴루이(당주)', '바르스(참모)', '만두카이(장수)'] }
   ],
-  '노르드가드': [
+  '노르드가드 왕국': [
     { name: '아이언사이드', role: '왕가', members: ['시그리드(당주)', '발더(참모)', '아스트리드(장수)'] },
     { name: '스톰본', role: '해상', members: ['헬가(당주)', '에릭(참모)', '잉그리드(장수)'] },
     { name: '그림울프', role: '의식', members: ['브륀힐트(당주)', '펜(참모)', '프레야(장수)'] }
@@ -128,7 +128,7 @@ export const families: Record<string, Family[]> = {
 
 export const regions: RegionGeography[] = [
   {
-    faction: '셉텐트리아', 
+    faction: '셉텐트리아 제국', 
     capital: '에테르나 도시 (아우렐리우스)',
     fortresses: [
       '황금관문 성 서문·동문 (아우렐리우스)',
@@ -145,7 +145,7 @@ export const regions: RegionGeography[] = [
     imageUrl: 'https://i.postimg.cc/WpWnn9Lb/sebtenteulia-jegug.png'
   },
   {
-    faction: '발로리아',
+    faction: '발로리아 왕국',
     capital: '발로리아시티 도시 (몽포르)',
     fortresses: [
       '그리핀보루 성 (몽포르)',
@@ -159,7 +159,7 @@ export const regions: RegionGeography[] = [
     imageUrl: 'https://i.postimg.cc/8kKHHyQT/jido-ballo-lia-selyeog.png'
   },
   {
-    faction: '아르데니아',
+    faction: '아르데니아 술탄국',
     capital: '알 다함 도시 (카심)',
     fortresses: [
       '알 자흐라 (알 디나)',
@@ -173,7 +173,7 @@ export const regions: RegionGeography[] = [
     imageUrl: 'https://i.postimg.cc/rynJJhXp/aleudenia-sultangug.png'
   },
   {
-    faction: '칸-테라',
+    faction: '칸-테라 대칸국',
     capital: '오르두 도시 (보르지긴)',
     fortresses: [
       '자르이무 성 (코르군)'
@@ -185,7 +185,7 @@ export const regions: RegionGeography[] = [
     imageUrl: 'https://i.postimg.cc/CMPNNvTF/kan-tela-daekangug.png'
   },
   {
-    faction: '노르드가드',
+    faction: '노르드가드 왕국',
     capital: '프로스트하임 도시 (아이언사이드)',
     fortresses: [
       '검은바위보루 성 (그림울프)'

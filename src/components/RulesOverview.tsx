@@ -15,41 +15,6 @@ export default function RulesOverview() {
         </p>
       </div>
 
-      <section className="bg-[url('https://i.postimg.cc/9FNLmccL/jemog-eobsneun-dijain.png')] bg-cover bg-center border border-stone-800 relative overflow-hidden group">
-        <div className="absolute inset-0 bg-[#0a0808]/90 backdrop-blur-sm transition-colors group-hover:bg-[#0a0808]/80"></div>
-        <div className="flex flex-col md:flex-row relative z-10 divide-y md:divide-y-0 md:divide-x divide-stone-800">
-          
-          <div className="flex-1 p-10 md:p-16">
-            <div className="mb-6 flex items-center justify-between">
-              <h3 className="text-3xl font-display text-rose-800 tracking-widest font-bold">NPC</h3>
-              <div className="text-sm font-serif tracking-widest text-[#d4af37] border border-[#d4af37]/50 px-3 py-1 bg-[#d4af37]/10 font-bold">철과 피의 규율</div>
-            </div>
-            <p className="text-lg text-stone-200 font-serif mb-6 leading-relaxed">
-              "마법, 이능력 따위는 시정잡배들의 음유시일 뿐이다. 검과 책략만이 권력을 쟁취하는 유일한 수단이다."
-            </p>
-            <p className="text-sm text-stone-400 font-serif leading-relaxed">
-              대륙의 모든 거주민들(NPC)은 판타지적 능력이나 기적을 부릴 수 없습니다. 
-              오직 군사적인 무력, 치밀한 전술, 그리고 배신이 난무하는 정치적 모략만으로 영지를 다스리고 외교를 펼칩니다.
-            </p>
-          </div>
-
-          <div className="flex-1 p-10 md:p-16">
-            <div className="mb-6 flex items-center justify-between">
-              <h3 className="text-3xl font-display text-emerald-700 tracking-widest font-bold">Player</h3>
-              <div className="text-sm font-serif tracking-widest text-[#d4af37] border border-[#d4af37]/50 px-3 py-1 bg-[#d4af37]/10 font-bold">구속받지 않는 자</div>
-            </div>
-            <p className="text-lg text-stone-200 font-serif mb-6 leading-relaxed">
-              "모두가 검을 벼릴 때, 당신만이 '이능'을 움켜쥐었다. 이단으로 죽을 것인가, 대륙을 칭패할 것인가."
-            </p>
-            <p className="text-sm text-stone-400 font-serif leading-relaxed">
-              당신은 세계의 룰에 구속받지 않는 유일한 존재입니다. 설정하신 판타지 능력을 제약 없이 구사할 수 있습니다. 
-              중무장한 적 기병대의 돌격 앞에서도 당신의 능력은 판도를 완전히 뒤엎을 수 있는 가장 강력한 무기입니다.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
       {/* 중간 배너 이미지로 시각적 환기 (프레야 전투 장면) */}
       <section className="relative w-full h-[350px] sm:h-[400px] md:h-[500px] border border-stone-800 overflow-hidden group">
          <img 
@@ -147,6 +112,41 @@ export default function RulesOverview() {
           </div>
         </section>
       </div>
+
+      <section className="bg-[url('https://i.postimg.cc/9FNLmccL/jemog-eobsneun-dijain.png')] bg-cover bg-center border border-stone-800 relative overflow-hidden group mt-16">
+        <div className="absolute inset-0 bg-[#0a0808]/90 backdrop-blur-sm transition-colors group-hover:bg-[#0a0808]/80"></div>
+        <div className="flex flex-col md:flex-row relative z-10 divide-y md:divide-y-0 md:divide-x divide-stone-800">
+          
+          <div className="flex-1 p-10 md:p-16">
+            <div className="mb-6 flex items-center justify-between">
+              <h3 className="text-3xl font-display text-rose-800 tracking-widest font-bold">NPC</h3>
+              <div className="text-sm font-serif tracking-widest text-[#d4af37] border border-[#d4af37]/50 px-3 py-1 bg-[#d4af37]/10 font-bold">철과 피의 규율</div>
+            </div>
+            <p className="text-lg text-stone-200 font-serif mb-6 leading-relaxed">
+              "마법, 이능력 따위는 시정잡배들의 음유시일 뿐이다. 검과 책략만이 권력을 쟁취하는 유일한 수단이다."
+            </p>
+            <p className="text-sm text-stone-400 font-serif leading-relaxed">
+              대륙의 모든 거주민들(NPC)은 판타지적 능력이나 기적을 부릴 수 없습니다. 
+              오직 군사적인 무력, 치밀한 전술, 그리고 배신이 난무하는 정치적 모략만으로 영지를 다스리고 외교를 펼칩니다.
+            </p>
+          </div>
+
+          <div className="flex-1 p-10 md:p-16">
+            <div className="mb-6 flex items-center justify-between">
+              <h3 className="text-3xl font-display text-emerald-700 tracking-widest font-bold">Player</h3>
+              <div className="text-sm font-serif tracking-widest text-[#d4af37] border border-[#d4af37]/50 px-3 py-1 bg-[#d4af37]/10 font-bold">구속받지 않는 자</div>
+            </div>
+            <p className="text-lg text-stone-200 font-serif mb-6 leading-relaxed">
+              "모두가 검을 벼릴 때, 당신만이 '이능'을 움켜쥐었다. 이단으로 죽을 것인가, 대륙을 칭패할 것인가."
+            </p>
+            <p className="text-sm text-stone-400 font-serif leading-relaxed">
+              당신은 세계의 룰에 구속받지 않는 유일한 존재입니다. 설정하신 판타지 능력을 제약 없이 구사할 수 있습니다. 
+              중무장한 적 기병대의 돌격 앞에서도 당신의 능력은 판도를 완전히 뒤엎을 수 있는 가장 강력한 무기입니다.
+            </p>
+          </div>
+
+        </div>
+      </section>
     </div>
   );
 }

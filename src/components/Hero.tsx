@@ -25,8 +25,8 @@ export default function Hero({ hasStarted = true, onStart }: HeroProps) {
         </h1>
         <div className="w-32 h-px bg-gradient-to-r from-transparent via-[#d4af37]/50 to-transparent mb-8"></div>
         <p className="max-w-2xl text-lg md:text-xl text-stone-300 font-serif leading-relaxed animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-300 drop-shadow-md break-keep">
-          이 대륙에 마법이나 기적은 없습니다.<br className="hidden md:block" /> 오직 차가운 강철과 피비린내 나는 모략만이 세상을 지배할 뿐입니다.<br />
-          그러나 세상의 섭리를 벗어난 단 한 사람, 바로 당신.<br className="hidden md:block" /> 당신만의 이능과 지략으로 이 난세의 서사를 쟁취하십시오.
+          이 대륙에 마법이나 기적은 없었습니다.<br className="hidden md:block" />
+          당신이 오기 전까진.
         </p>
         
         {!hasStarted && onStart && (

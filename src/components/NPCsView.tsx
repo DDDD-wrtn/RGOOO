@@ -16,14 +16,9 @@ export default function NPCsView() {
           </div>
         </div>
         <h2 className="text-4xl md:text-5xl font-display text-white mb-6 tracking-widest drop-shadow-md font-bold">
-          제국의 영주들과 유력 가문
+          대륙의 영주들과 유력 가문
         </h2>
-        <div className="w-32 h-px bg-[#d4af37]/40 mx-auto mb-8"></div>
-        <p className="text-stone-300 font-serif text-lg leading-relaxed">
-          대륙을 분할 통치하는 5대 세력, 그리고 그 안에서 권력을 쥐고 흔드는 3개의 유력 가문들.<br/>
-          각 가문의 당주, 수석 참모, 그리고 기사단장과 군사령관들의 열전입니다.<br/>
-          동맹을 맺어 뒷배를 두든, 적대하여 정벌의 제물로 삼든, 선택은 당신의 몫입니다.
-        </p>
+        <div className="w-32 h-px bg-[#d4af37]/40 mx-auto"></div>
       </div>
 
       {factionNames.map(faction => (

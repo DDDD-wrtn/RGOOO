@@ -4,11 +4,11 @@ import { ShieldAlert, Compass, ZoomIn } from 'lucide-react';
 import ImageModal from './ImageModal';
 
 const FACTION_IMAGES: Record<string, string> = {
-  '셉텐트리아': 'https://i.postimg.cc/90bdz5sp/aulelliuseu-1-jeontudol-ib.png',
-  '발로리아': 'https://i.postimg.cc/Zn4PTKsR/mongpoleu-1-jeontudol-ib.png',
-  '아르데니아': 'https://i.postimg.cc/ydFX4SPg/al-jaheuleu-3-jeontudol-ib.png',
-  '칸-테라': 'https://i.postimg.cc/sxsPVDH2/boleujigin-1-jeontudol-ib.png',
-  '노르드가드': 'https://i.postimg.cc/gcHqg8j7/aieonsaideu-1-jeontudol-ib.png',
+  '셉텐트리아 제국': 'https://i.postimg.cc/90bdz5sp/aulelliuseu-1-jeontudol-ib.png',
+  '발로리아 왕국': 'https://i.postimg.cc/Zn4PTKsR/mongpoleu-1-jeontudol-ib.png',
+  '아르데니아 술탄국': 'https://i.postimg.cc/ydFX4SPg/al-jaheuleu-3-jeontudol-ib.png',
+  '칸-테라 대칸국': 'https://i.postimg.cc/sxsPVDH2/boleujigin-1-jeontudol-ib.png',
+  '노르드가드 왕국': 'https://i.postimg.cc/gcHqg8j7/aieonsaideu-1-jeontudol-ib.png',
 };
 
 const BANDIT_IMAGES: Record<string, string> = {
@@ -26,30 +26,6 @@ export default function FactionsView() {
   return (
     <div className="space-y-20 animate-in fade-in duration-1000">
       
-      {/* 세계 지도 섹션 */}
-      <section className="relative">
-        <div className="text-center mb-12">
-           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-white tracking-widest mb-4 font-bold">전란의 대륙도</h2>
-           <div className="w-16 h-px bg-[#d4af37] mx-auto"></div>
-        </div>
-        <div 
-          className="w-full bg-[#050403] border border-[#d4af37]/30 shadow-2xl relative group cursor-pointer p-1 rounded-sm flex items-center justify-center"
-          onClick={() => setSelectedImage(WORLD_MAP_URL)}
-        >
-           {/* 골드 라인 프레임 */}
-           <div className="absolute inset-2 border border-[#d4af37]/20 pointer-events-none z-20"></div>
-           <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity z-30 flex items-center justify-center pointer-events-none">
-              <ZoomIn className="w-12 h-12 text-[#d4af37] drop-shadow-[0_0_10px_rgba(212,175,55,0.8)]" />
-           </div>
-           
-           <img 
-             src={WORLD_MAP_URL} 
-             alt="대륙 전체 지도" 
-             className="w-full h-auto object-contain opacity-90 group-hover:opacity-100 transition-all duration-700"
-           />
-        </div>
-      </section>
-
       {/* 5대 세력 섹션 */}
       <section>
         <div className="flex items-center gap-4 mb-12">
@@ -194,6 +170,30 @@ export default function FactionsView() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 세계 지도 섹션 */}
+      <section className="relative mt-20 pt-16 border-t border-stone-800">
+        <div className="text-center mb-12">
+           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-white tracking-widest mb-4 font-bold">전란의 대륙도</h2>
+           <div className="w-16 h-px bg-[#d4af37] mx-auto"></div>
+        </div>
+        <div 
+          className="w-full bg-[#050403] border border-[#d4af37]/30 shadow-2xl relative group cursor-pointer p-1 rounded-sm flex items-center justify-center"
+          onClick={() => setSelectedImage(WORLD_MAP_URL)}
+        >
+           {/* 골드 라인 프레임 */}
+           <div className="absolute inset-2 border border-[#d4af37]/20 pointer-events-none z-20"></div>
+           <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity z-30 flex items-center justify-center pointer-events-none">
+              <ZoomIn className="w-12 h-12 text-[#d4af37] drop-shadow-[0_0_10px_rgba(212,175,55,0.8)]" />
+           </div>
+           
+           <img 
+             src={WORLD_MAP_URL} 
+             alt="대륙 전체 지도" 
+             className="w-full h-auto object-contain opacity-90 group-hover:opacity-100 transition-all duration-700"
+           />
         </div>
       </section>
 
