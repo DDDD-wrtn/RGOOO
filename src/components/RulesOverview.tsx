@@ -50,25 +50,61 @@ export default function RulesOverview() {
         </div>
       </section>
 
+      {/* 중간 배너 이미지로 시각적 환기 (프레야 전투 장면) */}
+      <section className="relative w-full h-[400px] border border-stone-800 overflow-hidden group">
+         <img 
+           src="https://i.postimg.cc/C5SCFLrL/geulim-ulpeu-3-jeontudol-ib.png" 
+           alt="전투 장면"
+           className="absolute inset-0 w-full h-full object-cover object-top opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-1000 grayscale-[0.2]"
+         />
+         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0808] via-transparent to-transparent"></div>
+         <div className="absolute inset-0 bg-black/40"></div>
+         <div className="absolute bottom-10 left-10 md:left-16 z-10 max-w-xl">
+             <h3 className="text-2xl font-serif text-[#d4af37] tracking-widest mb-2 font-bold drop-shadow-lg">강철의 서사시</h3>
+             <p className="text-stone-300 font-serif leading-relaxed text-sm drop-shadow-md">
+                치열한 전장 속에서 당신의 능력이 판도를 뒤엎고 대륙의 전설이 됩니다. 대륙의 패권, 그것은 피로 쓰여진 역사입니다.
+             </p>
+         </div>
+      </section>
+
       <div className="grid lg:grid-cols-2 gap-10">
-        <section className="bg-stone-900/60 p-8 md:p-12 border border-stone-800 shadow-xl">
-          <h2 className="text-2xl font-serif text-white flex items-center gap-4 mb-10 pb-4 border-b border-stone-800 font-bold tracking-wide">
-            <Crosshair className="w-6 h-6 text-[#d4af37]" /> 6대 스탯 능력
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-            {stats.map(stat => (
-              <div key={stat.id} className="text-center group border border-transparent hover:border-[#d4af37]/30 p-4 transition-all bg-[#0f0c0a]">
-                <div className="text-4xl mb-3 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all">{stat.emoji}</div>
-                <div className="font-serif font-bold text-stone-300 tracking-widest group-hover:text-white transition-colors text-lg">{stat.name}</div>
-              </div>
-            ))}
+        <section className="relative p-8 md:p-12 border border-stone-800 shadow-xl overflow-hidden group">
+          <div className="absolute inset-0 z-0">
+             <img 
+               src="https://i.postimg.cc/kGsQD3LM/boleujigin-3-jeontudol-ib.png"
+               alt="스탯 배경"
+               className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-1000 grayscale-[0.5]"
+             />
+             <div className="absolute inset-0 bg-stone-950/80"></div>
+          </div>
+          <div className="relative z-10">
+            <h2 className="text-2xl font-serif text-white flex items-center gap-4 mb-10 pb-4 border-b border-stone-800 font-bold tracking-wide">
+              <Crosshair className="w-6 h-6 text-[#d4af37]" /> 6대 스탯 능력
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+              {stats.map(stat => (
+                <div key={stat.id} className="text-center group/stat border border-transparent hover:border-[#d4af37]/30 p-4 transition-all bg-black/60 backdrop-blur-sm">
+                  <div className="text-4xl mb-3 grayscale opacity-80 group-hover/stat:grayscale-0 group-hover/stat:opacity-100 transition-all">{stat.emoji}</div>
+                  <div className="font-serif font-bold text-stone-300 tracking-widest group-hover/stat:text-white transition-colors text-lg">{stat.name}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        <section className="bg-stone-900/60 p-8 md:p-12 border border-stone-800 shadow-xl">
-          <h2 className="text-2xl font-serif text-white flex items-center gap-4 mb-10 pb-4 border-b border-stone-800 font-bold tracking-wide">
-            <Shield className="w-6 h-6 text-[#d4af37]" /> 명예와 진급
-          </h2>
+        <section className="relative p-8 md:p-12 border border-stone-800 shadow-xl overflow-hidden group">
+          <div className="absolute inset-0 z-0">
+             <img 
+               src="https://i.postimg.cc/ydFX4SPg/al-jaheuleu-3-jeontudol-ib.png"
+               alt="진급 배경"
+               className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-1000 grayscale-[0.5] object-center"
+             />
+             <div className="absolute inset-0 bg-stone-950/80"></div>
+          </div>
+          <div className="relative z-10">
+            <h2 className="text-2xl font-serif text-white flex items-center gap-4 mb-10 pb-4 border-b border-stone-800 font-bold tracking-wide">
+              <Shield className="w-6 h-6 text-[#d4af37]" /> 명예와 진급
+            </h2>
           <div className="space-y-8">
             <div>
               <h3 className="text-base font-serif text-[#d4af37] tracking-widest mb-3 font-bold border-l-2 border-[#d4af37] pl-3">경험치 및 성장</h3>
@@ -106,6 +142,7 @@ export default function RulesOverview() {
                 </li>
               </ul>
             </div>
+          </div>
           </div>
         </section>
       </div>

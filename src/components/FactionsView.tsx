@@ -3,6 +3,14 @@ import { factions, bandits, regions, WORLD_MAP_URL } from '../data';
 import { ShieldAlert, Compass, ZoomIn } from 'lucide-react';
 import ImageModal from './ImageModal';
 
+const FACTION_IMAGES: Record<string, string> = {
+  '셉텐트리아': 'https://i.postimg.cc/90bdz5sp/aulelliuseu-1-jeontudol-ib.png',
+  '발로리아': 'https://i.postimg.cc/Zn4PTKsR/mongpoleu-1-jeontudol-ib.png',
+  '아르데니아': 'https://i.postimg.cc/sXp9dZcB/al-dina-1-jeontudol-ib.png',
+  '칸-테라': 'https://i.postimg.cc/sxsPVDH2/boleujigin-1-jeontudol-ib.png',
+  '노르드가드': 'https://i.postimg.cc/gcHqg8j7/aieonsaideu-1-jeontudol-ib.png',
+};
+
 export default function FactionsView() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -16,18 +24,19 @@ export default function FactionsView() {
            <div className="w-16 h-px bg-[#d4af37] mx-auto"></div>
         </div>
         <div 
-          className="w-full bg-[#050403] border border-[#d4af37]/20 shadow-2xl overflow-hidden relative group cursor-pointer p-2 md:p-6 rounded-sm max-h-[85vh] flex items-center justify-center"
+          className="w-full bg-[#050403] border border-[#d4af37]/30 shadow-2xl relative group cursor-pointer p-1 rounded-sm flex items-center justify-center"
           onClick={() => setSelectedImage(WORLD_MAP_URL)}
         >
-           <div className="absolute inset-0 z-10 pointer-events-none shadow-[inset_0_0_80px_rgba(0,0,0,0.8)]"></div>
-           <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity z-20 flex items-center justify-center pointer-events-none">
-              <ZoomIn className="w-10 h-10 text-[#d4af37]" />
+           {/* 골드 라인 프레임 */}
+           <div className="absolute inset-2 border border-[#d4af37]/20 pointer-events-none z-20"></div>
+           <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity z-30 flex items-center justify-center pointer-events-none">
+              <ZoomIn className="w-12 h-12 text-[#d4af37] drop-shadow-[0_0_10px_rgba(212,175,55,0.8)]" />
            </div>
            
            <img 
              src={WORLD_MAP_URL} 
              alt="대륙 전체 지도" 
-             className="w-full h-auto max-h-full object-contain opacity-80 group-hover:opacity-100 transition-all duration-[2s] group-hover:scale-[1.02]"
+             className="w-full h-auto object-contain opacity-90 group-hover:opacity-100 transition-all duration-700"
            />
         </div>
       </section>
@@ -45,52 +54,66 @@ export default function FactionsView() {
             const isEven = idx % 2 === 0;
 
             return (
-              <div key={faction.id} className={`flex flex-col lg:flex-row gap-10 ${isEven ? '' : 'lg:flex-row-reverse'}`}>
-                {/* 텍스트 영역 */}
-                <div className="flex-1 flex flex-col justify-center">
-                  <div className="mb-6">
-                    <span className="inline-block px-3 py-1 border border-[#d4af37]/40 bg-[#d4af37]/10 text-[#d4af37] font-serif text-xs font-bold tracking-widest mb-4">
-                      {faction.leaderType}
-                    </span>
-                    <h3 className="text-4xl md:text-5xl font-display text-white tracking-widest flex items-center gap-4 mb-4 font-bold drop-shadow-md">
-                       <span>{faction.name}</span>
-                       <span className="text-2xl text-[#d4af37] opacity-80">{faction.emoji}</span>
-                    </h3>
-                    <p className="text-xl text-[#bf953f] font-serif font-bold italic drop-shadow-sm border-l-2 border-[#bf953f] pl-4">"{faction.description}"</p>
-                  </div>
-
-                  {region && (
-                    <div className="space-y-6 bg-stone-900/60 p-8 border border-stone-800 shadow-xl">
-                      <div>
-                        <h4 className="flex items-center gap-2 text-sm font-serif text-stone-400 font-bold tracking-widest mb-3 border-b border-stone-800 pb-2">
-                           <Compass className="w-4 h-4 text-[#d4af37]" /> 영지의 심장, 수도
-                        </h4>
-                        <p className="text-stone-200 font-serif leading-relaxed text-lg font-bold">{region.capital}</p>
-                      </div>
-                      <div className="grid sm:grid-cols-2 gap-8">
-                        <div>
-                          <h4 className="text-sm font-serif text-stone-400 font-bold tracking-widest mb-3">전략적 요충지</h4>
-                          <ul className="space-y-2">
-                            {region.fortresses.map((fort, i) => (
-                              <li key={i} className="text-stone-300 text-sm font-serif leading-relaxed flex gap-2">
-                                <span className="text-[#d4af37] font-bold">•</span> {fort}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div>
-                          <h4 className="text-sm font-serif text-stone-400 font-bold tracking-widest mb-3">징수 및 보급 마을</h4>
-                          <ul className="space-y-2">
-                            {region.villages.map((village, i) => (
-                              <li key={i} className="text-stone-400 text-sm font-serif leading-relaxed flex gap-2">
-                                <span className="text-stone-600 font-bold shrink-0">-</span> <span>{village}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+              <div key={faction.id} className={`flex flex-col lg:flex-row gap-8 ${isEven ? '' : 'lg:flex-row-reverse'}`}>
+                {/* 텍스트 및 전투 아트 영역 */}
+                <div className="flex-1 relative border border-stone-800 group overflow-hidden bg-stone-950 flex flex-col justify-center shadow-xl">
+                  {FACTION_IMAGES[faction.name] && (
+                    <>
+                      <img 
+                        src={FACTION_IMAGES[faction.name]} 
+                        alt={`${faction.name} 전경`}
+                        className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-1000 grayscale-[0.3]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/90 to-stone-950/40"></div>
+                      <div className={`absolute inset-0 bg-gradient-to-r ${isEven ? 'from-stone-950 via-stone-950/80 to-transparent' : 'from-transparent via-stone-950/80 to-stone-950'}`}></div>
+                    </>
                   )}
+                  
+                  <div className="relative z-10 p-8 lg:p-12 h-full flex flex-col justify-center">
+                    <div className="mb-8">
+                      <span className="inline-block px-3 py-1 border border-[#d4af37]/40 bg-[#d4af37]/10 text-[#d4af37] font-serif text-xs font-bold tracking-widest mb-4 backdrop-blur-md">
+                        {faction.leaderType}
+                      </span>
+                      <h3 className="text-4xl md:text-5xl font-display text-white tracking-widest flex items-center gap-4 mb-4 font-bold drop-shadow-md">
+                        <span>{faction.name}</span>
+                        <span className="text-2xl text-[#d4af37] opacity-80">{faction.emoji}</span>
+                      </h3>
+                      <p className="text-xl text-[#bf953f] font-serif font-bold italic drop-shadow-sm border-l-2 border-[#bf953f] pl-4">"{faction.description}"</p>
+                    </div>
+
+                    {region && (
+                      <div className="space-y-6 bg-black/60 backdrop-blur-sm p-6 lg:p-8 border border-stone-700/50 shadow-2xl">
+                        <div>
+                          <h4 className="flex items-center gap-2 text-sm font-serif text-stone-300 font-bold tracking-widest mb-3 border-b border-stone-700 pb-2">
+                             <Compass className="w-4 h-4 text-[#d4af37]" /> 영지의 심장, 수도
+                          </h4>
+                          <p className="text-stone-200 font-serif leading-relaxed text-lg font-bold">{region.capital}</p>
+                        </div>
+                        <div className="grid sm:grid-cols-2 gap-8">
+                          <div>
+                            <h4 className="text-sm font-serif text-stone-300 font-bold tracking-widest mb-3">전략적 요충지</h4>
+                            <ul className="space-y-2">
+                              {region.fortresses.map((fort, i) => (
+                                <li key={i} className="text-stone-300 text-sm font-serif leading-relaxed flex gap-2">
+                                  <span className="text-[#d4af37] font-bold">•</span> {fort}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="text-sm font-serif text-stone-300 font-bold tracking-widest mb-3">징수 및 보급 마을</h4>
+                            <ul className="space-y-2">
+                              {region.villages.map((village, i) => (
+                                <li key={i} className="text-stone-400 text-sm font-serif leading-relaxed flex gap-2">
+                                  <span className="text-stone-600 font-bold shrink-0">-</span> <span>{village}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 {/* 지도 영역 */}
@@ -123,21 +146,33 @@ export default function FactionsView() {
       </section>
 
       {/* 도적단 영역 */}
-      <section className="pt-16 border-t border-stone-900 mt-20">
-        <div className="text-center mb-12">
-          <ShieldAlert className="w-12 h-12 text-rose-800 mx-auto mb-4" />
-          <h2 className="text-4xl font-display font-bold text-rose-700 tracking-widest mb-4 drop-shadow-md">도적단 출몰지</h2>
-          <p className="text-stone-400 font-serif text-lg">기근과 전란이 낳은 대륙의 골칫거리들. 소규모 교전을 통한 명성 파밍의 주 대상입니다.</p>
+      <section className="pt-16 mt-20 relative px-8 py-16 border border-stone-800 shadow-2xl overflow-hidden group">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://i.postimg.cc/Wz8GtLxg/bobe-1-jeontudol-ib.png" 
+            alt="도적단 토벌"
+            className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-1000 grayscale-[0.6]"
+          />
+          <div className="absolute inset-0 bg-stone-950/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-stone-950"></div>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {bandits.map((bandit, idx) => (
-            <div key={idx} className="bg-gradient-to-br from-[#140b0b] to-[#0a0505] p-6 border border-rose-900/50 hover:border-rose-700/80 transition-colors shadow-lg group">
-              <div className="text-xs font-serif font-bold tracking-widest text-[#d4af37] mb-2">{bandit.region}</div>
-              <h3 className="text-2xl font-display font-bold text-rose-500 mb-4 tracking-widest group-hover:text-rose-400 transition-colors">{bandit.name}</h3>
-              <p className="text-sm text-stone-300 font-serif leading-relaxed">{bandit.description}</p>
-            </div>
-          ))}
+
+        <div className="relative z-10">
+          <div className="text-center mb-12">
+            <ShieldAlert className="w-12 h-12 text-rose-800 mx-auto mb-4" />
+            <h2 className="text-4xl font-display font-bold text-rose-700 tracking-widest mb-4 drop-shadow-md">도적단 출몰지</h2>
+            <p className="text-stone-400 font-serif text-lg">기근과 전란이 낳은 대륙의 골칫거리들. 소규모 교전을 통한 명성 파밍의 주 대상입니다.</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {bandits.map((bandit, idx) => (
+              <div key={idx} className="bg-black/60 backdrop-blur-md p-6 border border-rose-900/50 hover:border-rose-700/80 transition-colors shadow-lg group/bandit">
+                <div className="text-xs font-serif font-bold tracking-widest text-[#d4af37] mb-2">{bandit.region}</div>
+                <h3 className="text-2xl font-display font-bold text-rose-500 mb-4 tracking-widest group-hover/bandit:text-rose-400 transition-colors">{bandit.name}</h3>
+                <p className="text-sm text-stone-300 font-serif leading-relaxed">{bandit.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
