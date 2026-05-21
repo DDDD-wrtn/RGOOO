@@ -10,8 +10,9 @@ export default function RulesOverview() {
           대륙의 규율
         </h2>
         <div className="w-24 h-px bg-[#d4af37]/30 mx-auto mb-8"></div>
-        <p className="text-stone-300 font-serif text-lg leading-relaxed">
-          이 대륙에는 신의 기적도, 요정의 축복도 없습니다.<br/>모든 영주와 백성은 육신과 강철이라는 불변의 진리 아래 살아갑니다.
+        <p className="text-stone-300 font-serif text-lg leading-relaxed break-keep">
+          이 대륙에는 신의 기적도, 요정의 축복도 없었습니다.<br/>
+          육신과 강철이라는 불변의 진리 깰 자, 바로 당신입니다.
         </p>
       </div>
 
