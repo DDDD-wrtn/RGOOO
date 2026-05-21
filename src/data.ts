@@ -27,17 +27,17 @@ export const bandits: Bandit[] = [
 ];
 
 export const companions: Companion[] = [
-  { id: 'c1', name: '루실리아', gender: '女', role: '중보병', tier: 'T2', stats: '💪7 👁9', specialty: '방패벽진형유지(야전방어시👁+1)', imageUrl: 'https://i.postimg.cc/9fDwYjT3/lusillia.png' },
-  { id: 'c2', name: '카시우스', gender: '男', role: '행정가', tier: 'T1', stats: '🧠9 🌹3', specialty: '영지세수+20%,교역협상시🧠+1', imageUrl: 'https://i.postimg.cc/XvrBk0FS/kasiuseu.png' },
-  { id: 'c3', name: '베아트리스', gender: '女', role: '소드마스터', tier: 'T2', stats: '💪7 🪽9', specialty: '일기토시💪+1', imageUrl: 'https://i.postimg.cc/vm4xtdnJ/beateuliseu.png' },
-  { id: 'c4', name: '줄리앙', gender: '男', role: '음유시인', tier: 'T1', stats: '🌹9 🧠6', specialty: '연회·외교시🌹+1,정보수집', imageUrl: 'https://i.postimg.cc/XvrBk052/julliang.png' },
-  { id: 'c5', name: '자디르', gender: '女', role: '상인', tier: 'T1', stats: '🧠7 🌹6', specialty: '매입가−10%,전리품판매가+15%', imageUrl: 'https://i.postimg.cc/KY13DyTJ/jadileu.png' },
-  { id: 'c6', name: '하킴', gender: '男', role: '의학자', tier: 'T2', stats: '🧠8 🌹5', specialty: '부상회복2배,독살공작(🧠판정)', imageUrl: 'https://i.postimg.cc/pdm5Jtj1/hakim.png' },
-  { id: 'c7', name: '우루누크', gender: '女', role: '기마궁수', tier: 'T3', stats: '💪9 🪽7', specialty: '산병전시🪽+1,파르티안샷', imageUrl: 'https://i.postimg.cc/T37WbPKs/ulunukeu.png' },
-  { id: 'c8', name: '치치', gender: '女', role: '기마궁수', tier: 'T2', stats: '💪7 🪽6', specialty: '기마추격시🪽+1', imageUrl: 'https://i.postimg.cc/DzS4PKGp/chichi.png' },
-  { id: 'c9', name: '바트바야르', gender: '男', role: '공학자', tier: 'T1', stats: '🧠8 💪3', specialty: '공성병기제작2배,수리비−50%', imageUrl: 'https://i.postimg.cc/9Q8q9fDN/bateubayaleu.png' },
-  { id: 'c10', name: '에일라', gender: '女', role: '소드마스터', tier: 'T2', stats: '💪7 🪽6 👁4', specialty: '돌격시적진형붕괴판정+1', imageUrl: 'https://i.postimg.cc/qvbCK7ND/eilla.png' },
-  { id: 'c11', name: '시그리트', gender: '女', role: '아처', tier: 'T1', stats: '💪6 🪽7', specialty: '정찰·매복간파시🪽+1,악천후무시', imageUrl: 'https://i.postimg.cc/BnY1FvjV/sigeuliteu.png' },
+  { id: 'c1', name: '루실리아', gender: '女', role: '중보병', tier: 'T2', stats: '💪7 👁9', specialty: '방패벽 진형 유지 (야전 방어 시 👁+1)', imageUrl: 'https://i.postimg.cc/9fDwYjT3/lusillia.png' },
+  { id: 'c2', name: '카시우스', gender: '男', role: '행정가', tier: 'T1', stats: '🧠9 🌹3', specialty: '영지 세수 증가 (+20%), 교역 협상 우위 (🧠+1)', imageUrl: 'https://i.postimg.cc/XvrBk0FS/kasiuseu.png' },
+  { id: 'c3', name: '베아트리스', gender: '女', role: '소드마스터', tier: 'T2', stats: '💪7 🪽9', specialty: '일기토 전투 시 무력 우위 (💪+1)', imageUrl: 'https://i.postimg.cc/vm4xtdnJ/beateuliseu.png' },
+  { id: 'c4', name: '줄리앙', gender: '男', role: '음유시인', tier: 'T1', stats: '🌹9 🧠6', specialty: '연회 및 외교 시 매력 우위 (🌹+1), 정보 수집 특화', imageUrl: 'https://i.postimg.cc/XvrBk052/julliang.png' },
+  { id: 'c5', name: '자디르', gender: '女', role: '상인', tier: 'T1', stats: '🧠7 🌹6', specialty: '물품 매입가 10% 인하, 전리품 판매가 15% 인상', imageUrl: 'https://i.postimg.cc/KY13DyTJ/jadileu.png' },
+  { id: 'c6', name: '하킴', gender: '男', role: '의학자', tier: 'T2', stats: '🧠8 🌹5', specialty: '부상 회복 속도 2배, 독살 공작 가능 (🧠 지력 판정)', imageUrl: 'https://i.postimg.cc/pdm5Jtj1/hakim.png' },
+  { id: 'c7', name: '우루누크', gender: '女', role: '기마궁수', tier: 'T3', stats: '💪9 🪽7', specialty: '산병전 시 기동력 우위 (🪽+1), 파르티안 샷(퇴각 중 사격) 구사', imageUrl: 'https://i.postimg.cc/T37WbPKs/ulunukeu.png' },
+  { id: 'c8', name: '치치', gender: '女', role: '기마궁수', tier: 'T2', stats: '💪7 🪽6', specialty: '기마 추격전 시 기동력 우위 (🪽+1)', imageUrl: 'https://i.postimg.cc/DzS4PKGp/chichi.png' },
+  { id: 'c9', name: '바트바야르', gender: '男', role: '공학자', tier: 'T1', stats: '🧠8 💪3', specialty: '공성 병기 제작 속도 2배 향상, 수리비 50% 절감', imageUrl: 'https://i.postimg.cc/9Q8q9fDN/bateubayaleu.png' },
+  { id: 'c10', name: '에일라', gender: '女', role: '소드마스터', tier: 'T2', stats: '💪7 🪽6 👁4', specialty: '돌격 시 적 진형 붕괴 판정 유리', imageUrl: 'https://i.postimg.cc/qvbCK7ND/eilla.png' },
+  { id: 'c11', name: '시그리트', gender: '女', role: '아처', tier: 'T1', stats: '💪6 🪽7', specialty: '정찰 및 매복 간파 시 우위 (🪽+1), 악천후 무시', imageUrl: 'https://i.postimg.cc/BnY1FvjV/sigeuliteu.png' },
 ];
 
 export const npcs: Record<string, NPC[]> = {

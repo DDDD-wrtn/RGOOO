@@ -16,17 +16,18 @@ export default function FactionsView() {
            <div className="w-16 h-px bg-[#d4af37] mx-auto"></div>
         </div>
         <div 
-          className="w-full aspect-[21/9] md:aspect-[3/1] bg-stone-900 border border-stone-800 shadow-2xl overflow-hidden relative group cursor-pointer"
+          className="w-full bg-[#050403] border border-[#d4af37]/20 shadow-2xl overflow-hidden relative group cursor-pointer p-2 md:p-6 rounded-sm max-h-[85vh] flex items-center justify-center"
           onClick={() => setSelectedImage(WORLD_MAP_URL)}
         >
-           <div className="absolute inset-0 z-10 pointer-events-none shadow-[inset_0_0_100px_rgba(0,0,0,0.9)]"></div>
+           <div className="absolute inset-0 z-10 pointer-events-none shadow-[inset_0_0_80px_rgba(0,0,0,0.8)]"></div>
            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity z-20 flex items-center justify-center pointer-events-none">
               <ZoomIn className="w-10 h-10 text-[#d4af37]" />
            </div>
+           
            <img 
              src={WORLD_MAP_URL} 
              alt="대륙 전체 지도" 
-             className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 transition-transform duration-[2s] group-hover:scale-105"
+             className="w-full h-auto max-h-full object-contain opacity-80 group-hover:opacity-100 transition-all duration-[2s] group-hover:scale-[1.02]"
            />
         </div>
       </section>

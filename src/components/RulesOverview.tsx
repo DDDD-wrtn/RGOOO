@@ -97,12 +97,12 @@ export default function RulesOverview() {
                   <span className="text-xs tracking-widest text-[#d4af37] font-bold">명성 300</span>
                 </li>
                 <li className="flex items-center justify-between border-b border-stone-800/50 pb-2">
-                  <span className="text-[#bf953f] font-bold tracking-widest text-sm">Tier 4 <span className="mx-3 text-white font-bold drop-shadow-sm">영주</span></span>
+                  <span className="text-[#bf953f] font-bold tracking-widest text-sm">Tier 4 <span className="mx-3 text-white font-bold">영주</span></span>
                   <span className="text-xs tracking-widest text-[#d4af37] font-bold">명성 700</span>
                 </li>
                 <li className="flex items-center justify-between pt-1">
-                  <span className="text-[#d4af37] font-bold tracking-widest text-lg">Tier 5 <span className="mx-3 text-white text-lg font-black shadow-[0_0_20px_#d4af37] drop-shadow-md">군주</span></span>
-                  <span className="text-xs tracking-widest text-[#facc15] font-black drop-shadow-[0_0_5px_rgba(250,204,21,0.5)]">명성 1200</span>
+                  <span className="text-[#d4af37] font-bold tracking-widest text-sm">Tier 5 <span className="mx-3 text-white font-bold">군주</span></span>
+                  <span className="text-xs tracking-widest text-[#facc15] font-bold">명성 1200</span>
                 </li>
               </ul>
             </div>

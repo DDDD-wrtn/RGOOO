@@ -29,17 +29,17 @@ export default function CompanionsView() {
           <div className="space-y-4">
             <h4 className="flex items-center gap-2 text-stone-100 font-serif text-xl border-b border-stone-700 pb-2 font-bold"><Users className="w-5 h-5 text-emerald-500"/> 부대원 모집</h4>
             <ul className="text-sm text-stone-300 space-y-3 font-serif leading-relaxed">
-              <li className="flex items-start gap-2"><ChevronRight className="w-4 h-4 shrink-0 text-[#d4af37] mt-0.5"/> <strong>주점 조우:</strong> 각 세력 대도시 타번(주점) 방문 시 해당 세력 출신 동료 2인 무작위 조우</li>
+              <li className="flex items-start gap-2"><ChevronRight className="w-4 h-4 shrink-0 text-[#d4af37] mt-0.5"/> <strong>선술집 조우:</strong> 각 세력 대도시 타번(선술집) 방문 시 해당 세력 출신 동료 2인 무작위 조우</li>
               <li className="flex items-start gap-2"><ChevronRight className="w-4 h-4 shrink-0 text-[#d4af37] mt-0.5"/> <strong>고용 협상:</strong> 대화를 통한 사연 파악 후 부대 합류 제안 및 금화 흥정</li>
-              <li className="flex items-start gap-2"><ChevronRight className="w-4 h-4 shrink-0 text-[#d4af37] mt-0.5"/> <strong>재야 인물:</strong> 영입을 거절하더라도 훗날 타 주점에서 재회하여 재협상 가능</li>
+              <li className="flex items-start gap-2"><ChevronRight className="w-4 h-4 shrink-0 text-[#d4af37] mt-0.5"/> <strong>재야 인물:</strong> 영입을 거절하더라도 훗날 다른 선술집에서 재회하여 재협상 가능</li>
             </ul>
           </div>
           <div className="space-y-4">
             <h4 className="flex items-center gap-2 text-stone-100 font-serif text-xl border-b border-stone-700 pb-2 font-bold"><Coins className="w-5 h-5 text-[#d4af37]"/> 주급 (시즌 단위 단위 유지비)</h4>
             <ul className="text-sm text-stone-300 space-y-3 font-serif leading-relaxed">
-              <li className="flex items-center justify-between bg-black/40 px-3 py-2 border border-stone-800"><span className="text-stone-400 font-bold">Tier 1 보병/궁수</span> <strong className="text-[#bf953f] font-mono text-base">3 Denars</strong></li>
-              <li className="flex items-center justify-between bg-black/40 px-3 py-2 border border-stone-800"><span className="text-stone-400 font-bold">Tier 2 정예/전문가</span> <strong className="text-[#bf953f] font-mono text-base">8 Denars</strong></li>
-              <li className="flex items-center justify-between bg-black/40 px-3 py-2 border border-stone-800"><span className="text-stone-400 font-bold">Tier 3 기병/지휘관</span> <strong className="text-[#bf953f] font-mono text-base">15 Denars</strong></li>
+              <li className="flex items-center justify-between bg-black/40 px-3 py-2 border border-stone-800"><span className="text-stone-400 font-bold">Tier 1 보병/궁수</span> <strong className="text-[#bf953f] font-mono text-base">3 Gold</strong></li>
+              <li className="flex items-center justify-between bg-black/40 px-3 py-2 border border-stone-800"><span className="text-stone-400 font-bold">Tier 2 정예/전문가</span> <strong className="text-[#bf953f] font-mono text-base">8 Gold</strong></li>
+              <li className="flex items-center justify-between bg-black/40 px-3 py-2 border border-stone-800"><span className="text-stone-400 font-bold">Tier 3 기병/지휘관</span> <strong className="text-[#bf953f] font-mono text-base">15 Gold</strong></li>
             </ul>
           </div>
           <div className="space-y-4">
