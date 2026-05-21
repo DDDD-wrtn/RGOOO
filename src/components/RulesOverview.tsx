@@ -6,7 +6,7 @@ export default function RulesOverview() {
     <div className="space-y-16 animate-in fade-in duration-1000">
       
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="text-4xl md:text-5xl font-display text-white mb-6 tracking-widest drop-shadow-md font-bold">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-white mb-6 tracking-widest drop-shadow-md font-bold">
           대륙의 규율
         </h2>
         <div className="w-24 h-px bg-[#d4af37]/30 mx-auto mb-8"></div>
@@ -51,7 +51,7 @@ export default function RulesOverview() {
       </section>
 
       {/* 중간 배너 이미지로 시각적 환기 (프레야 전투 장면) */}
-      <section className="relative w-full h-[500px] border border-stone-800 overflow-hidden group">
+      <section className="relative w-full h-[350px] sm:h-[400px] md:h-[500px] border border-stone-800 overflow-hidden group">
          <img 
            src="https://i.postimg.cc/C5SCFLrL/geulim-ulpeu-3-jeontudol-ib.png" 
            alt="전투 장면"
@@ -59,10 +59,10 @@ export default function RulesOverview() {
          />
          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0808]/80 via-transparent to-transparent"></div>
          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0808] via-transparent to-transparent"></div>
-         <div className="absolute inset-0 bg-black/40"></div>
-         <div className="absolute bottom-10 left-10 md:left-16 z-10 max-w-xl">
-             <h3 className="text-3xl md:text-4xl font-display text-[#d4af37] tracking-widest mb-4 font-bold drop-shadow-lg">강철의 서사시</h3>
-             <p className="text-stone-300 font-serif leading-relaxed text-sm drop-shadow-md pb-2">
+         <div className="absolute inset-0 bg-transparent sm:bg-black/20"></div>
+         <div className="absolute bottom-6 sm:bottom-10 left-6 sm:left-10 md:left-16 z-10 max-w-xs sm:max-w-xl pr-6">
+             <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-[#d4af37] tracking-widest mb-3 sm:mb-4 font-bold drop-shadow-lg">강철의 서사시</h3>
+             <p className="text-stone-300 font-serif leading-relaxed text-xs sm:text-sm drop-shadow-md pb-2">
                 치열한 전장 속에서 당신의 능력이 판도를 뒤엎고 대륙의 전설이 됩니다.<br className="hidden sm:block"/> 대륙의 패권, 그것은 피로 쓰여진 역사입니다.
              </p>
          </div>
@@ -122,24 +122,24 @@ export default function RulesOverview() {
               </h3>
               <ul className="space-y-3 font-serif bg-black/40 p-4 border border-stone-800">
                 <li className="flex items-center justify-between border-b border-stone-800/50 pb-2">
-                  <span className="text-stone-400 font-bold tracking-widest text-sm">Tier 1 <span className="mx-3 text-stone-300 font-medium">평민</span></span>
-                  <span className="text-xs tracking-widest text-[#d4af37]/50 font-medium">기본 계급</span>
+                  <span className="text-stone-400 font-bold tracking-widest text-xs sm:text-sm">Tier 1 <span className="mx-2 sm:mx-3 text-stone-300 font-medium">평민</span></span>
+                  <span className="text-[10px] sm:text-xs tracking-widest text-[#d4af37]/50 font-medium whitespace-nowrap ml-2">기본 계급</span>
                 </li>
                 <li className="flex items-center justify-between border-b border-stone-800/50 pb-2">
-                  <span className="text-stone-400 font-bold tracking-widest text-sm">Tier 2 <span className="mx-3 text-stone-200 font-medium">용병</span></span>
-                  <span className="text-xs tracking-widest text-[#d4af37]/70 font-bold">명성 100</span>
+                  <span className="text-stone-400 font-bold tracking-widest text-xs sm:text-sm">Tier 2 <span className="mx-2 sm:mx-3 text-stone-200 font-medium">용병</span></span>
+                  <span className="text-[10px] sm:text-xs tracking-widest text-[#d4af37]/70 font-bold whitespace-nowrap ml-2">명성 100</span>
                 </li>
                 <li className="flex items-center justify-between border-b border-stone-800/50 pb-2">
-                  <span className="text-stone-400 font-bold tracking-widest text-sm">Tier 3 <span className="mx-3 text-white font-bold drop-shadow-sm">가신</span></span>
-                  <span className="text-xs tracking-widest text-[#d4af37] font-bold">명성 300</span>
+                  <span className="text-stone-400 font-bold tracking-widest text-xs sm:text-sm">Tier 3 <span className="mx-2 sm:mx-3 text-white font-bold drop-shadow-sm">가신</span></span>
+                  <span className="text-[10px] sm:text-xs tracking-widest text-[#d4af37] font-bold whitespace-nowrap ml-2">명성 300</span>
                 </li>
                 <li className="flex items-center justify-between border-b border-stone-800/50 pb-2">
-                  <span className="text-[#bf953f] font-bold tracking-widest text-sm">Tier 4 <span className="mx-3 text-white font-bold">영주</span></span>
-                  <span className="text-xs tracking-widest text-[#d4af37] font-bold">명성 700</span>
+                  <span className="text-[#bf953f] font-bold tracking-widest text-xs sm:text-sm">Tier 4 <span className="mx-2 sm:mx-3 text-white font-bold">영주</span></span>
+                  <span className="text-[10px] sm:text-xs tracking-widest text-[#d4af37] font-bold whitespace-nowrap ml-2">명성 700</span>
                 </li>
                 <li className="flex items-center justify-between pt-1">
-                  <span className="text-[#d4af37] font-bold tracking-widest text-sm">Tier 5 <span className="mx-3 text-white font-bold">군주</span></span>
-                  <span className="text-xs tracking-widest text-[#facc15] font-bold">명성 1200</span>
+                  <span className="text-[#d4af37] font-bold tracking-widest text-xs sm:text-sm">Tier 5 <span className="mx-2 sm:mx-3 text-white font-bold">군주</span></span>
+                  <span className="text-[10px] sm:text-xs tracking-widest text-[#facc15] font-bold whitespace-nowrap ml-2">명성 1200</span>
                 </li>
               </ul>
             </div>

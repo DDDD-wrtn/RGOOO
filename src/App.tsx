@@ -18,12 +18,12 @@ export default function App() {
       
       {hasStarted && (
         <>
-          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10 animate-in fade-in duration-1000 flex-1">
-            <div className="flex justify-center mb-16">
-          <nav className="inline-flex flex-wrap justify-center gap-1 bg-stone-900/60 p-2 rounded-none border border-stone-800 shadow-[0_0_20px_rgba(0,0,0,0.5)] backdrop-blur">
+          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 relative z-10 animate-in fade-in duration-1000 flex-1">
+            <div className="flex justify-center mb-8 sm:mb-16">
+          <nav className="flex flex-col sm:flex-row w-full sm:w-auto sm:inline-flex justify-center gap-2 sm:gap-1 bg-stone-900/60 p-2 border border-stone-800 shadow-[0_0_20px_rgba(0,0,0,0.5)] backdrop-blur">
             <button
               onClick={() => setActiveTab('rules')}
-              className={`flex items-center gap-2 px-8 py-4 text-sm font-serif uppercase tracking-widest transition-all ${
+              className={`flex items-center justify-center gap-2 px-4 py-3 sm:px-8 sm:py-4 text-xs sm:text-sm font-serif uppercase tracking-widest transition-all ${
                 activeTab === 'rules' 
                   ? 'bg-gradient-to-b from-[#6a4c14] to-[#3a2808] text-[#facc15] shadow-inner border-t border-[#facc15]/30' 
                   : 'text-stone-400 hover:text-stone-200 hover:bg-stone-800/80 border-t border-transparent'
@@ -33,7 +33,7 @@ export default function App() {
             </button>
             <button
               onClick={() => setActiveTab('factions')}
-              className={`flex items-center gap-2 px-8 py-4 text-sm font-serif uppercase tracking-widest transition-all border-l border-stone-800/50 ${
+              className={`flex items-center justify-center gap-2 px-4 py-3 sm:px-8 sm:py-4 text-xs sm:text-sm font-serif uppercase tracking-widest transition-all sm:border-l border-stone-800/50 ${
                 activeTab === 'factions' 
                   ? 'bg-gradient-to-b from-[#6a4c14] to-[#3a2808] text-[#facc15] shadow-inner border-t border-[#facc15]/30' 
                   : 'text-stone-400 hover:text-stone-200 hover:bg-stone-800/80 border-t border-transparent'
@@ -43,7 +43,7 @@ export default function App() {
             </button>
             <button
               onClick={() => setActiveTab('companions')}
-              className={`flex items-center gap-2 px-8 py-4 text-sm font-serif uppercase tracking-widest transition-all border-l border-stone-800/50 ${
+              className={`flex items-center justify-center gap-2 px-4 py-3 sm:px-8 sm:py-4 text-xs sm:text-sm font-serif uppercase tracking-widest transition-all sm:border-l border-stone-800/50 ${
                 activeTab === 'companions' 
                   ? 'bg-gradient-to-b from-[#6a4c14] to-[#3a2808] text-[#facc15] shadow-inner border-t border-[#facc15]/30' 
                   : 'text-stone-400 hover:text-stone-200 hover:bg-stone-800/80 border-t border-transparent'
@@ -53,7 +53,7 @@ export default function App() {
             </button>
             <button
               onClick={() => setActiveTab('npcs')}
-              className={`flex items-center gap-2 px-8 py-4 text-sm font-serif uppercase tracking-widest transition-all border-l border-stone-800/50 ${
+              className={`flex items-center justify-center gap-2 px-4 py-3 sm:px-8 sm:py-4 text-xs sm:text-sm font-serif uppercase tracking-widest transition-all sm:border-l border-stone-800/50 ${
                 activeTab === 'npcs' 
                   ? 'bg-gradient-to-b from-[#6a4c14] to-[#3a2808] text-[#facc15] shadow-inner border-t border-[#facc15]/30' 
                   : 'text-stone-400 hover:text-stone-200 hover:bg-stone-800/80 border-t border-transparent'

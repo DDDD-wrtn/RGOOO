@@ -29,7 +29,7 @@ export default function FactionsView() {
       {/* 세계 지도 섹션 */}
       <section className="relative">
         <div className="text-center mb-12">
-           <h2 className="text-4xl md:text-5xl font-display text-white tracking-widest mb-4 font-bold">전란의 대륙도</h2>
+           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-white tracking-widest mb-4 font-bold">전란의 대륙도</h2>
            <div className="w-16 h-px bg-[#d4af37] mx-auto"></div>
         </div>
         <div 
@@ -53,7 +53,7 @@ export default function FactionsView() {
       {/* 5대 세력 섹션 */}
       <section>
         <div className="flex items-center gap-4 mb-12">
-          <h2 className="text-4xl font-display text-white tracking-widest pl-3 border-l-4 border-[#d4af37] font-bold">5대 지배 세력</h2>
+          <h2 className="text-3xl sm:text-4xl font-display text-white tracking-widest pl-3 border-l-4 border-[#d4af37] font-bold">5대 지배 세력</h2>
           <div className="flex-1 h-px bg-stone-800"></div>
         </div>
 
@@ -83,7 +83,7 @@ export default function FactionsView() {
                       <span className="inline-block px-3 py-1 border border-[#d4af37]/40 bg-[#d4af37]/10 text-[#d4af37] font-serif text-xs font-bold tracking-widest mb-4 backdrop-blur-md">
                         {faction.leaderType}
                       </span>
-                      <h3 className="text-4xl md:text-5xl font-display text-white tracking-widest flex items-center gap-4 mb-4 font-bold drop-shadow-md">
+                      <h3 className="text-3xl sm:text-4xl md:text-5xl font-display text-white tracking-widest flex items-center gap-4 mb-4 font-bold drop-shadow-md">
                         <span>{faction.name}</span>
                         <span className="text-2xl text-[#d4af37] opacity-80">{faction.emoji}</span>
                       </h3>
@@ -155,7 +155,7 @@ export default function FactionsView() {
       </section>
 
       {/* 도적단 영역 */}
-      <section className="pt-16 mt-20 relative px-8 py-16 border border-stone-800 shadow-2xl overflow-hidden group">
+      <section className="pt-12 sm:pt-16 mt-16 sm:mt-20 relative px-4 sm:px-8 py-12 sm:py-16 border border-stone-800 shadow-2xl overflow-hidden group">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.postimg.cc/Wz8GtLxg/bobe-1-jeontudol-ib.png" 
@@ -169,7 +169,7 @@ export default function FactionsView() {
         <div className="relative z-10">
           <div className="text-center mb-12">
             <ShieldAlert className="w-12 h-12 text-rose-800 mx-auto mb-4" />
-            <h2 className="text-4xl font-display font-bold text-rose-700 tracking-widest mb-4 drop-shadow-md">도적단 출몰지</h2>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-rose-700 tracking-widest mb-4 drop-shadow-md">도적단 출몰지</h2>
             <p className="text-stone-400 font-serif text-lg">기근과 전란이 낳은 대륙의 골칫거리들. 소규모 교전을 통한 명성 파밍의 주 대상입니다.</p>
           </div>
           

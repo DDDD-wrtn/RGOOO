@@ -19,9 +19,9 @@ export default function Hero({ hasStarted = true, onStart }: HeroProps) {
         <div className="inline-flex items-center gap-2 px-4 py-1.5 border-y border-[#d4af37]/30 text-[#d4af37] text-sm font-serif tracking-[0.2em] mb-10 animate-in fade-in slide-in-from-bottom-4 duration-700 font-bold bg-black/50 backdrop-blur-sm">
           남녀역전 중세 전략 롤플레잉
         </div>
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display text-white tracking-widest mb-8 leading-tight animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-150 drop-shadow-2xl font-black break-keep">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display text-white tracking-widest mb-8 leading-tight animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-150 drop-shadow-2xl font-black break-keep">
           남녀역전 중세에서<br/>
-          유일한 <span className="text-stone-300 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] font-serif font-light tracking-widest ml-2">“&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;”</span>
+          유일한 <span className="text-stone-300 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] font-serif font-light tracking-widest ml-1 md:ml-2">“&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;”</span>
         </h1>
         <div className="w-32 h-px bg-gradient-to-r from-transparent via-[#d4af37]/50 to-transparent mb-8"></div>
         <p className="max-w-2xl text-lg md:text-xl text-stone-300 font-serif leading-relaxed animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-300 drop-shadow-md break-keep">
@@ -34,7 +34,7 @@ export default function Hero({ hasStarted = true, onStart }: HeroProps) {
             onClick={onStart}
             className="group relative mt-16 animate-in fade-in slide-in-from-bottom-8 delay-500 transform hover:scale-[1.02] transition-all duration-500"
           >
-            <div className="relative px-20 lg:px-24 py-6 bg-gradient-to-b from-[#1a110a] via-[#0a0604] to-[#050302] border-y-2 border-x border-[#8b6932] group-hover:border-[#d4af37] transition-all duration-500 shadow-[0_15px_30px_rgba(0,0,0,0.8)] flex items-center justify-center gap-6 min-w-[320px] lg:min-w-[400px]">
+            <div className="relative px-12 sm:px-20 lg:px-24 py-4 sm:py-6 bg-gradient-to-b from-[#1a110a] via-[#0a0604] to-[#050302] border-y-2 border-x border-[#8b6932] group-hover:border-[#d4af37] transition-all duration-500 shadow-[0_15px_30px_rgba(0,0,0,0.8)] flex items-center justify-center gap-4 sm:gap-6 w-full max-w-[280px] sm:max-w-none sm:min-w-[320px] lg:min-w-[400px] mx-auto">
               
               {/* Ornate Inner Frame */}
               <div className="absolute inset-[5px] border border-[#d4af37]/30 group-hover:border-[#d4af37]/60 transition-colors pointer-events-none"></div>
@@ -81,8 +81,8 @@ export default function Hero({ hasStarted = true, onStart }: HeroProps) {
               <span className="relative z-10 text-[#d4af37]/80 text-2xl group-hover:text-[#facc15] transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,1)] font-serif">⚜</span>
               
               <div className="relative z-10 flex flex-col items-center">
-                <span className="pt-1 text-4xl font-display font-black tracking-[0.4em] text-[#d4af37] group-hover:text-[#facc15] group-hover:drop-shadow-[0_0_15px_rgba(250,204,21,0.6)] transition-all drop-shadow-[0_4px_4px_rgba(0,0,0,1)] pl-2">START</span>
-                <div className="w-16 h-px bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mt-1"></div>
+                <span className="pt-1 text-2xl sm:text-4xl font-display font-black tracking-[0.2em] sm:tracking-[0.4em] text-[#d4af37] group-hover:text-[#facc15] group-hover:drop-shadow-[0_0_15px_rgba(250,204,21,0.6)] transition-all drop-shadow-[0_4px_4px_rgba(0,0,0,1)] pl-1 sm:pl-2">START</span>
+                <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mt-1"></div>
               </div>
 
               <span className="relative z-10 text-[#d4af37]/80 text-2xl group-hover:text-[#facc15] transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,1)] font-serif">⚜</span>
